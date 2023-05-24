@@ -1,0 +1,312 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+
+
+html, body{
+    height: 100%;
+    font-size: 16px;
+}
+
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  10px 100px;
+    z-index: 100;
+}
+
+header nav.menu li{
+    display: inline-block;
+}
+
+
+header nav.menu li a{
+   text-decoration: none;
+   margin: 0 10px;
+   color: white;
+   font-weight: 500;
+   transition: all .5s;
+}
+
+header nav.menu li a:hover{
+  color:#de0611;
+}
+
+header .logo img{
+    max-width: 150px;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+header .logo img:hover{
+    transform: rotate(360deg);
+
+}
+
+
+
+header .search{
+    position: relative;
+    width: 300px;
+    height: 40px;
+}
+
+header .search input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: 2px solid rgb(255, 51, 51);
+    padding-left: 45px;
+    background-color: transparent;
+}
+
+header .search input::placeholder{
+   color: white;
+}
+
+
+
+section.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 100px;
+
+}
+
+section.banner  img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+section.banner .content{
+     /* position: relative */
+     z-index: 1;
+   
+}
+
+
+section.banner .content h2{
+    color: white;
+    font-size: 60px;
+}
+
+section.banner .content h4 span{
+    color: white;
+    font-weight: 700;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 0 10px;
+}
+
+
+
+section.banner .content h4 span:first-child{
+   padding-left: 0;
+}
+
+
+section.banner .content h4 span i{
+    background-color: #de0611;
+    padding: 0 8px;
+    border-radius: 2px;
+ }
+ 
+ 
+
+
+section.banner .content p{
+    color: white;
+    font-size: 1rem;
+    max-width: 550px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+section.banner  button.play-btn{
+    padding: 7px 15px;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: #de0611;
+    color: white;
+    border: 0;
+    cursor: pointer;
+  
+}
+
+
+section.banner  .buttons i{
+   margin-right: 5px;
+   vertical-align: middle;
+  
+}
+
+
+section.banner  button.my-list{
+    padding: 7px 15px;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: #de0611;
+    color: white;
+    border: 0;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+section.banner .buttons button.my-list:hover{
+  background-color: #000;
+}
+
+
+.play{
+    position: absolute;
+    bottom: 50px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 1.2em;
+    cursor: pointer;
+  
+}
+
+.play i{
+ font-size: 40px;
+}
+
+
+.trailer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+     backdrop-filter: blur(20px); 
+    z-index: 999;
+    display: none;
+    transition: all 1s;
+    animation: fade .5s forwards;
+}
+
+@keyframes fade{
+   from{
+     opacity: 0;
+   }
+   to{
+    opacity: 1;
+   }
+}
+
+.active{
+  display: block;
+}
+
+
+.video{
+    width: 100%;
+    max-width: 600px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.hide{
+    position: absolute;
+    top: 40px;
+    right: 50px;
+}
+
+.hide i{
+  font-size: 50px;
+  color: white;
+}
+
+
+@media screen and (min-width: 740px) and (max-width: 991px){
+    header{
+        flex-direction: column;
+        padding: 20px 0px;
+    }
+
+
+    .search{
+        margin-top: 20px;
+    }
+
+}
+
+
+@media screen and (max-width: 739px){
+
+
+    header{
+        flex-direction: column;
+        padding: 10px 0px;
+    }
+
+
+    .search{
+        margin-top: 20px;
+    }
+    
+    section.banner .content p{
+        color: white;
+        font-size: 1rem;
+        max-width: 400px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    section.banner{
+        padding: 0 10px;
+        display: flex;
+        justify-content: center ;
+
+    }
+
+
+    section.banner .content h2{
+        color: white;
+        font-size: 40px;
+    }
+
+
+
+    header nav.menu li a{
+        margin: 0 5px;
+     }
+
+     .hide{
+        position: absolute;
+        top: 10px;
+        right: 0px;
+    }
+     
+
+}
