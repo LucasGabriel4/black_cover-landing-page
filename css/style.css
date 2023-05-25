@@ -63,6 +63,7 @@ header .search{
     height: 40px;
 }
 
+
 header .search input{
     position: absolute;
     top: 0;
@@ -79,6 +80,13 @@ header .search input::placeholder{
    color: white;
 }
 
+header .search i{
+    position: absolute;
+    top: 11px;
+    left: 18px;
+    color: white;
+    font-size: 18px;
+}
 
 
 section.banner {
@@ -191,7 +199,7 @@ section.banner .buttons button.my-list:hover{
     letter-spacing: 1px;
     font-size: 1.2em;
     cursor: pointer;
-  
+    animation: animation 3s forwards infinite;
 }
 
 .play i{
@@ -210,6 +218,25 @@ section.banner .buttons button.my-list:hover{
     display: none;
     transition: all 1s;
     animation: fade .5s forwards;
+}
+
+
+@keyframes animation{
+    0%{
+        transform: scale(1);
+    }
+    20%{
+        transform: scale(1.1);
+    }
+    50%{
+        transform: scale(.8);
+    }
+    70%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1); 
+    }
 }
 
 @keyframes fade{
